@@ -1,0 +1,23 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Orion-XX/moonpmtiles/adapters/memory"
+
+// Values
+pub fn data_length(MemorySource) -> UInt64
+
+pub fn from_bytes(Bytes) -> MemorySource
+
+pub fn read_range(MemorySource, UInt64, UInt64) -> Result[Bytes, String]
+
+pub fn request_count(MemorySource) -> Int
+
+// Errors
+
+// Types and methods
+pub struct MemorySource {
+  data : Bytes
+  requests : Array[(UInt64, UInt64)]
+}
+
+// Type aliases
+
+// Traits
