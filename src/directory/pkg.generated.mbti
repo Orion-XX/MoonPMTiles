@@ -1,0 +1,36 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Orion-XX/moonpmtiles/src/directory"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn decode_directory(Bytes, Limits) -> Result[Array[DirectoryEntry], String]
+
+pub fn encode_directory(Array[DirectoryEntry], Limits) -> Result[Bytes, String]
+
+pub fn find_entry(Array[DirectoryEntry], UInt64) -> DirectoryEntry?
+
+pub fn make_entry(UInt64, UInt64, UInt64, UInt64) -> DirectoryEntry
+
+pub fn make_limits(UInt64, UInt) -> Limits
+
+// Errors
+
+// Types and methods
+pub struct DirectoryEntry {
+  tile_id : UInt64
+  offset : UInt64
+  length : UInt64
+  run_length : UInt64
+} derive(Eq, @debug.Debug)
+
+pub struct Limits {
+  max_bytes : UInt64
+  max_entries : UInt
+}
+
+// Type aliases
+
+// Traits
