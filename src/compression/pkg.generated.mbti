@@ -1,0 +1,23 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Orion-XX/moonpmtiles/src/compression"
+
+import {
+  "Orion-XX/moonpmtiles/src/model",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn supports(@model.Compression) -> Bool
+
+pub fn validate(@model.Compression) -> Result[Unit, CompressionError]
+
+// Errors
+
+// Types and methods
+pub enum CompressionError {
+  UnsupportedCompression
+} derive(Eq, @debug.Debug)
+
+// Type aliases
+
+// Traits

@@ -1,0 +1,8 @@
+import {
+  "Orion-XX/moonpmtiles/src/codec",
+  "Orion-XX/moonpmtiles/src/compression",
+  "Orion-XX/moonpmtiles/src/directory",
+  "Orion-XX/moonpmtiles/src/model",
+  "Orion-XX/moonpmtiles/src/tileid",
+  "Orion-XX/moonpmtiles/adapters/memory",
+}

@@ -1,0 +1,47 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Orion-XX/moonpmtiles/src/archive"
+
+import {
+  "Orion-XX/moonpmtiles/adapters/memory",
+  "Orion-XX/moonpmtiles/src/directory",
+  "Orion-XX/moonpmtiles/src/model",
+}
+
+// Values
+pub fn get_tile(Archive, @model.TileCoord) -> Result[TileResult?, String]
+
+pub fn make_limits(UInt64, UInt) -> Limits
+
+pub fn open(@memory.MemorySource, Limits) -> Result[Archive, String]
+
+pub fn request_count(Archive) -> Int
+
+pub fn tile_compression(TileResult) -> @model.Compression
+
+pub fn tile_data(TileResult) -> Bytes
+
+pub fn tile_type(TileResult) -> @model.TileType
+
+// Errors
+
+// Types and methods
+pub struct Archive {
+  source : @memory.MemorySource
+  header : @model.Header
+  entries : Array[@directory.DirectoryEntry]
+}
+
+pub struct Limits {
+  max_root_bytes : UInt64
+  max_directory_entries : UInt
+}
+
+pub struct TileResult {
+  data : Bytes
+  tile_type : @model.TileType
+  compression : @model.Compression
+}
+
+// Type aliases
+
+// Traits
